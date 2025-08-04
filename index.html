@@ -187,15 +187,26 @@
       const container = document.getElementById('cotas-container');
       container.innerHTML = '';
       todasCotas = [];
-      for (let i = 1; i <= TOTAL_COTAS; i++) {
-        const btn = document.createElement('button');
-        btn.className = 'cota';
-        btn.textContent = i;
-        btn.dataset.numero = i;
-        btn.onclick = () => selecionarCota(i);
-        container.appendChild(btn);
-        todasCotas.push(btn);
-      }
+
+      db.ref('cotas').once('value', snapshot => {
+        const reservadas = snapshot.val() || {};
+        for (let i = 1; i <= TOTAL_COTAS; i++) {
+          const btn = document.createElement('button');
+          btn.className = 'cota';
+          btn.textContent = i;
+          btn.dataset.numero = i;
+
+          if (reservadas[i]) {
+            btn.classList.add('reservada');
+            btn.disabled = true;
+          } else {
+            btn.onclick = () => selecionarCota(i);
+          }
+
+          container.appendChild(btn);
+          todasCotas.push(btn);
+        }
+      });
     }
 
     function selecionarCota(num) {
@@ -230,11 +241,11 @@
     function enviarWhatsApp() {
       const mensagem = `*RESERVA DE COTAS*%0A%0A➤ *Nome:* ${nomeCliente}%0A➤ *Cotas:* ${cotasSelecionadas.join(', ')}%0A➤ *Total:* R$ ${(cotasSelecionadas.length * VALOR_COTA).toFixed(2)}%0A%0A*Envie o comprovante PIX nesta conversa* 🏧`;
       window.open(`https://wa.me/${SEU_WHATSAPP}?text=${mensagem}`, '_blank');
+      const updates = {};
       cotasSelecionadas.forEach(num => {
-        const btn = document.querySelector(`.cota[data-numero="${num}"]`);
-        btn.classList.add('reservada');
-        btn.classList.remove('selecionada');
+        updates[num] = { reservada: true, nome: nomeCliente };
       });
+      db.ref('cotas').update(updates);
       cotasSelecionadas = [];
       atualizarResumo();
       alert("Agora envie o comprovante no WhatsApp que abriu!");

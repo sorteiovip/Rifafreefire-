@@ -1,295 +1,258 @@
-<!DOCTYPE html><html>
+<!DOCTYPE html><html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rifa Free Fire 10K</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #1a1a2e;
-            color: white;
-            padding: 15px;
-            max-width: 100%;
-            margin: 0 auto;
-        }
-        .pagina {
-            display: none;
-        }
-        #inicio {
-            display: block;
-            text-align: center;
-        }
-        .logo {
-            font-size: 1.8rem;
-            color: #ffcc00;
-            margin: 20px 0;
-        }
-        .btn {
-            display: block;
-            background: #ffcc00;
-            color: #1a1a2e;
-            padding: 12px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: bold;
-            margin: 20px 0;
-            text-align: center;
-            border: none;
-            width: 100%;
-        }
-        .cotas-container {
-            max-height: 300px;
-            overflow-y: auto;
-            margin: 15px 0;
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
-            gap: 5px;
-        }
-        .cota {
-            width: 100%;
-            aspect-ratio: 1;
-            background: #4e2b2a;
-            color: white;
-            border: 2px solid #ffcc00;
-            border-radius: 5px;
-            font-size: 12px;
-        }
-        .selecionada {
-            background: #ffcc00;
-            color: black;
-        }
-        .reservada {
-            background: #ff5555;
-            opacity: 0.5;
-        }
-        #pix-code {
-            background: white;
-            padding: 15px;
-            border-radius: 10px;
-            margin: 15px 0;
-            text-align: center;
-        }
-        #chave-pix {
-            color: black;
-            font-family: monospace;
-            word-break: break-word;
-            background: #f0f0f0;
-            padding: 10px;
-            border-radius: 5px;
-        }
-        .btn-copiar {
-            background: #4e2b2a;
-            color: white;
-            border: none;
-            padding: 8px 12px;
-            border-radius: 5px;
-            margin-top: 10px;
-            cursor: pointer;
-        }
-        .search-box {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border-radius: 5px;
-            border: none;
-        }
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
-            overflow: hidden;
-            margin: 20px 0;
-            border-radius: 10px;
-        }
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rifa Free Fire 10K</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #1a1a2e;
+      color: white;
+      padding: 15px;
+      max-width: 100%;
+      margin: 0 auto;
+    }
+    .pagina {
+      display: none;
+    }
+    #inicio {
+      display: block;
+      text-align: center;
+    }
+    .logo {
+      font-size: 1.8rem;
+      color: #ffcc00;
+      margin: 20px 0;
+    }
+    .btn {
+      display: block;
+      background: #ffcc00;
+      color: #1a1a2e;
+      padding: 12px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 20px 0;
+      text-align: center;
+      border: none;
+      width: 100%;
+      cursor: pointer;
+    }
+    .cotas-container {
+      max-height: 300px;
+      overflow-y: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+      gap: 5px;
+    }
+    .cota {
+      width: 100%;
+      aspect-ratio: 1;
+      background: #4e2b2a;
+      color: white;
+      border: 2px solid #ffcc00;
+      border-radius: 5px;
+      font-size: 12px;
+    }
+    .selecionada {
+      background: #ffcc00;
+      color: black;
+    }
+    .reservada {
+      background: #ff5555;
+      opacity: 0.5;
+    }
+    .search-box {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      border: none;
+    }
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      margin: 20px 0;
+      border-radius: 10px;
+    }
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    #pix-code {
+      background: white;
+      padding: 15px;
+      border-radius: 10px;
+      margin: 15px 0;
+      text-align: center;
+    }
+    #chave-pix {
+      color: black;
+      font-family: monospace;
+      word-break: break-word;
+      background: #f0f0f0;
+      padding: 10px;
+      border-radius: 5px;
+    }
+    .btn-copiar {
+      background: #4e2b2a;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
-    <div id="inicio" class="pagina">
-        <div class="logo">🎯 RIFA FREE FIRE 10K</div>
-        <div class="card">
-            <h2>PRÊMIO: CONTA PREMIUM</h2>
-            <p>10.000 cotas disponíveis</p>
-            <p>R$ 0,50 por cota (até 30 por pessoa)</p>
-            <button onclick="mostrarPagina('selecao')" class="btn">ESCOLHER COTAS</button>
-        </div><h3 style="margin-top: 30px;">🎬 VÍDEO DO PRÊMIO</h3>
+  <div id="inicio" class="pagina">
+    <div class="logo">🎯 RIFA FREE FIRE 10K</div>
+    <h2>PRÊMIO: CONTA PREMIUM</h2>
+    <p>10.000 cotas disponíveis</p>
+    <p>R$ 0,50 por cota (até 30 por pessoa)</p>
+    <button onclick="mostrarPagina('selecao')" class="btn">ESCOLHER COTAS</button>
+    <h3 style="margin-top: 30px;">📹 VÍDEO DO PRÊMIO</h3>
     <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/jSc3URBakK4" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/jSc3URBakK4" allowfullscreen></iframe>
     </div>
-</div>
-
-<div id="selecao" class="pagina">
-    <button onclick="mostrarPagina('inicio')" style="background: none; border: none; color: #ffcc00; margin-bottom: 15px;">← Voltar</button>
+  </div>
+  <div id="selecao" class="pagina">
+    <button onclick="mostrarPagina('inicio')" style="color: #ffcc00; background: none; border: none;">← Voltar</button>
     <h2 style="text-align: center;">Selecione até 30 cotas:</h2>
     <input type="text" id="busca-cota" class="search-box" placeholder="Buscar cota (ex: 1500)" oninput="filtrarCotas()">
     <div class="cotas-container" id="cotas-container"></div>
-    <div style="margin-top: 15px;">
-        <p>Cotas selecionadas: <span id="contador">0</span>/30</p>
-        <p>Total: R$ <span id="total">0.00</span></p>
-        <button id="btn-reservar" disabled class="btn">📲 CONFIRMAR COTAS</button>
-    </div>
-</div>
-
-<div id="pagamento" class="pagina">
-    <button onclick="mostrarPagina('selecao')" style="background: none; border: none; color: #ffcc00; margin-bottom: 15px;">← Voltar</button>
+    <p>Cotas selecionadas: <span id="contador">0</span>/30</p>
+    <p>Total: R$ <span id="total">0.00</span></p>
+    <button id="btn-reservar" class="btn" disabled>📲 CONFIRMAR COTAS</button>
+  </div>
+  <div id="pagamento" class="pagina">
+    <button onclick="mostrarPagina('selecao')" style="color: #ffcc00; background: none; border: none;">← Voltar</button>
     <h2 style="text-align: center;">FINALIZAR PAGAMENTO</h2>
-    <div style="background: rgba(0,0,0,0.3); padding: 15px; border-radius: 10px; margin: 15px 0;">
-        <h3>📋 RESUMO</h3>
-        <p>Nome: <strong id="resumo-nome"></strong></p>
-        <p>Cotas: <strong id="resumo-cotas"></strong></p>
-        <p>Total: <strong id="resumo-total"></strong></p>
+    <div style="background: rgba(0,0,0,0.3); padding: 15px; border-radius: 10px;">
+      <h3>📋 RESUMO</h3>
+      <p>Nome: <strong id="resumo-nome"></strong></p>
+      <p>Cotas: <strong id="resumo-cotas"></strong></p>
+      <p>Total: <strong id="resumo-total"></strong></p>
     </div>
     <h3>📌 PAGAMENTO VIA PIX</h3>
     <div id="pix-code">
-        <p style="color: black; font-weight: bold;">Chave PIX:</p>
-        <p id="chave-pix">4e2b2a9a-60fb-47a6-a76e-3b1ac466cd71</p>
-        <button onclick="copiarChavePix()" class="btn-copiar">📋 Copiar Chave</button>
-        <p style="color: black; margin-top: 10px;">Valor: <strong id="pix-valor"></strong></p>
+      <p style="color: black; font-weight: bold;">Chave PIX:</p>
+      <p id="chave-pix">4e2b2a9a-60fb-47a6-a76e-3b1ac466cd71</p>
+      <button onclick="copiarChavePix()" class="btn-copiar">📋 Copiar Chave</button>
+      <p style="color: black; margin-top: 10px;">Valor: <strong id="pix-valor"></strong></p>
     </div>
     <button onclick="enviarWhatsApp()" class="btn" style="background: #25D366;">📲 ENVIAR COMPROVANTE</button>
-</div>
-
-<!-- Firebase SDK -->
-<script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database.js"></script>
-<script>
+  </div>  <!-- Firebase compat scripts -->  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>  <script>
     const firebaseConfig = {
-        apiKey: "AIzaSyCITC-27Jyngw7DkRxFW_9sbQJy4uVnuMs",
-        authDomain: "rifafreefire-3c9d4.firebaseapp.com",
-        databaseURL: "https://rifafreefire-3c9d4-default-rtdb.firebaseio.com",
-        projectId: "rifafreefire-3c9d4",
-        storageBucket: "rifafreefire-3c9d4.firebasestorage.app",
-        messagingSenderId: "504695645299",
-        appId: "1:504695645299:web:226f7fe4fe37c57104f606",
-        measurementId: "G-77WEQYQK20"
+      apiKey: "AIzaSyCITC-27Jyngw7DkRxFW_9sbQJy4uVnuMs",
+      authDomain: "rifafreefire-3c9d4.firebaseapp.com",
+      databaseURL: "https://rifafreefire-3c9d4-default-rtdb.firebaseio.com",
+      projectId: "rifafreefire-3c9d4",
+      storageBucket: "rifafreefire-3c9d4.appspot.com",
+      messagingSenderId: "504695645299",
+      appId: "1:504695645299:web:226f7fe4fe37c57104f606"
     };
-
-    const app = firebase.initializeApp(firebaseConfig);
-    const database = firebase.database();
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.database();
 
     const TOTAL_COTAS = 10000;
     const MAX_SELECAO = 30;
     const VALOR_COTA = 0.50;
     const SEU_WHATSAPP = "5581985315382";
     const CHAVE_PIX = "4e2b2a9a-60fb-47a6-a76e-3b1ac466cd71";
-    const LINK_VIDEO = "https://www.youtube.com/embed/jSc3URBakK4";
 
     let cotasSelecionadas = [];
     let nomeCliente = "";
     let todasCotas = [];
 
     function mostrarPagina(id) {
-        document.querySelectorAll('.pagina').forEach(pag => pag.style.display = 'none');
-        document.getElementById(id).style.display = 'block';
-        if (id === 'pagamento') {
-            document.getElementById('resumo-nome').textContent = nomeCliente;
-            document.getElementById('resumo-cotas').textContent = cotasSelecionadas.join(', ');
-            document.getElementById('resumo-total').textContent = `R$ ${(cotasSelecionadas.length * VALOR_COTA).toFixed(2)}`;
-            document.getElementById('pix-valor').textContent = `R$ ${(cotasSelecionadas.length * VALOR_COTA).toFixed(2)}`;
-        }
+      document.querySelectorAll('.pagina').forEach(p => p.style.display = 'none');
+      document.getElementById(id).style.display = 'block';
+      if (id === 'pagamento') {
+        document.getElementById('resumo-nome').textContent = nomeCliente;
+        document.getElementById('resumo-cotas').textContent = cotasSelecionadas.join(', ');
+        document.getElementById('resumo-total').textContent = `R$ ${(cotasSelecionadas.length * VALOR_COTA).toFixed(2)}`;
+        document.getElementById('pix-valor').textContent = `R$ ${(cotasSelecionadas.length * VALOR_COTA).toFixed(2)}`;
+      }
     }
 
     function gerarCotas() {
-        const container = document.getElementById('cotas-container');
-        container.innerHTML = '';
-        for (let i = 1; i <= TOTAL_COTAS; i++) {
-            const btn = document.createElement('button');
-            btn.className = 'cota';
-            btn.textContent = i;
-            btn.dataset.numero = i;
-            btn.onclick = () => selecionarCota(i);
-            container.appendChild(btn);
-            todasCotas.push(btn);
-        }
-    }
-
-    function carregarCotasFirebase() {
-        const ref = database.ref("cotas/");
-        ref.once("value", snapshot => {
-            const reservadas = snapshot.val() || {};
-            for (let numero in reservadas) {
-                const btn = document.querySelector(`.cota[data-numero="${numero}"]`);
-                if (btn) {
-                    btn.classList.add("reservada");
-                    btn.disabled = true;
-                }
-            }
-        });
-    }
-
-    function filtrarCotas() {
-        const termo = document.getElementById('busca-cota').value.toLowerCase();
-        todasCotas.forEach(btn => {
-            const numero = btn.dataset.numero;
-            btn.style.display = termo === '' || numero.includes(termo) ? 'block' : 'none';
-        });
+      const container = document.getElementById('cotas-container');
+      container.innerHTML = '';
+      todasCotas = [];
+      for (let i = 1; i <= TOTAL_COTAS; i++) {
+        const btn = document.createElement('button');
+        btn.className = 'cota';
+        btn.textContent = i;
+        btn.dataset.numero = i;
+        btn.onclick = () => selecionarCota(i);
+        container.appendChild(btn);
+        todasCotas.push(btn);
+      }
     }
 
     function selecionarCota(num) {
-        const btn = document.querySelector(`.cota[data-numero="${num}"]`);
-        if (btn.classList.contains('reservada')) return;
-        if (cotasSelecionadas.includes(num)) {
-            cotasSelecionadas = cotasSelecionadas.filter(n => n !== num);
-            btn.classList.remove('selecionada');
-        } else {
-            if (cotasSelecionadas.length >= MAX_SELECAO) {
-                alert(`Máximo de ${MAX_SELECAO} cotas por pessoa!`);
-                return;
-            }
-            cotasSelecionadas.push(num);
-            btn.classList.add('selecionada');
+      const btn = document.querySelector(`.cota[data-numero="${num}"]`);
+      if (btn.classList.contains('reservada')) return;
+      if (cotasSelecionadas.includes(num)) {
+        cotasSelecionadas = cotasSelecionadas.filter(n => n !== num);
+        btn.classList.remove('selecionada');
+      } else {
+        if (cotasSelecionadas.length >= MAX_SELECAO) {
+          alert(`Máximo de ${MAX_SELECAO} cotas por pessoa!`);
+          return;
         }
-        atualizarResumo();
+        cotasSelecionadas.push(num);
+        btn.classList.add('selecionada');
+      }
+      atualizarResumo();
     }
 
     function atualizarResumo() {
-        document.getElementById('contador').textContent = cotasSelecionadas.length;
-        document.getElementById('total').textContent = (cotasSelecionadas.length * VALOR_COTA).toFixed(2);
-        document.getElementById('btn-reservar').disabled = cotasSelecionadas.length === 0;
+      document.getElementById('contador').textContent = cotasSelecionadas.length;
+      document.getElementById('total').textContent = (cotasSelecionadas.length * VALOR_COTA).toFixed(2);
+      document.getElementById('btn-reservar').disabled = cotasSelecionadas.length === 0;
     }
 
     function copiarChavePix() {
-        navigator.clipboard.writeText(CHAVE_PIX)
-            .then(() => alert("Chave PIX copiada! ✅"))
-            .catch(() => prompt("Copie manualmente:", CHAVE_PIX));
+      navigator.clipboard.writeText(CHAVE_PIX)
+        .then(() => alert("Chave PIX copiada! ✅"))
+        .catch(() => prompt("Copie manualmente:", CHAVE_PIX));
     }
 
     function enviarWhatsApp() {
-        const mensagem = `*RESERVA DE COTAS*%0A%0A` +
-            `➤ *Nome:* ${nomeCliente}%0A` +
-            `➤ *Cotas:* ${cotasSelecionadas.join(', ')}%0A` +
-            `➤ *Total:* R$ ${(cotasSelecionadas.length * VALOR_COTA).toFixed(2)}%0A%0A` +
-            `*Envie o comprovante PIX nesta conversa* 🏧`;
-        window.open(`https://wa.me/${SEU_WHATSAPP}?text=${mensagem}`, '_blank');
-        cotasSelecionadas.forEach(num => {
-            const btn = document.querySelector(`.cota[data-numero="${num}"]`);
-            btn.classList.add('reservada');
-            btn.classList.remove('selecionada');
-        });
-        cotasSelecionadas = [];
-        alert("Agora envie o comprovante no WhatsApp que abriu!");
+      const mensagem = `*RESERVA DE COTAS*%0A%0A➤ *Nome:* ${nomeCliente}%0A➤ *Cotas:* ${cotasSelecionadas.join(', ')}%0A➤ *Total:* R$ ${(cotasSelecionadas.length * VALOR_COTA).toFixed(2)}%0A%0A*Envie o comprovante PIX nesta conversa* 🏧`;
+      window.open(`https://wa.me/${SEU_WHATSAPP}?text=${mensagem}`, '_blank');
+      cotasSelecionadas.forEach(num => {
+        const btn = document.querySelector(`.cota[data-numero="${num}"]`);
+        btn.classList.add('reservada');
+        btn.classList.remove('selecionada');
+      });
+      cotasSelecionadas = [];
+      atualizarResumo();
+      alert("Agora envie o comprovante no WhatsApp que abriu!");
     }
 
-    document.getElementById('btn-reservar').onclick = function () {
-        nomeCliente = prompt("Digite seu nome completo:");
-        if (nomeCliente) {
-            mostrarPagina('pagamento');
-        }
+    function filtrarCotas() {
+      const termo = document.getElementById('busca-cota').value.toLowerCase();
+      todasCotas.forEach(btn => {
+        const numero = btn.dataset.numero;
+        btn.style.display = termo === '' || numero.includes(termo) ? 'block' : 'none';
+      });
+    }
+
+    document.getElementById('btn-reservar').onclick = function() {
+      nomeCliente = prompt("Digite seu nome completo:");
+      if (nomeCliente) mostrarPagina('pagamento');
     };
 
-    window.onload = function () {
-        gerarCotas();
-        carregarCotasFirebase();
-        document.querySelector('.video-container iframe').src = LINK_VIDEO;
-    };
-</script>
-
-</body>
+    window.onload = () => gerarCotas();
+  </script></body>
 </html>
